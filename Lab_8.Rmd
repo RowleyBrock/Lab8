@@ -11,12 +11,12 @@ author:
   - name          : "Brock Rowley"
     affiliation   : "1"
     corresponding : no
-    address       : "Behavioral Research & Teaching (BRT) 175 Lokey Education 5262                                             University of Oregon Eugene, OR, 97403-5262"
+    address       : "Behavioral Research & Teaching (BRT) 175 Lokey Education 5262                                                    University of Oregon Eugene, OR, 97403-5262"
     email         : "brockr@uoregon.edu"
   - name          : "Jeff Gau"
     affiliation   : "1"
     corresponding : no
-    address       : "College of Education Center on Human Development (chd.uoregon.edu) University Center                      for Excellence in Developmental Disabilities (UCEDD) 901 East 18th Ave, CSB 354                           Eugene, Oregon 97403"
+    address       : "College of Education Center on Human Development (chd.uoregon.edu) University Center                             for Excellence in Developmental Disabilities (UCEDD) 901 East 18th Ave, CSB 354                                  Eugene, Oregon 97403"
     email         : "jeffg@uoregon.edu"
   - name          : "Kyle Reardon"
     affiliation   : "1"
@@ -32,7 +32,7 @@ author:
 abstract: |
   This is our abstract and it's really something else! SO abstract!
   
-keywords          : "add, some, keywords, words, keys"
+keywords          : "add, some, keywords, words, keys, Yo, Key, Word"
 
 bibliography      : ["r-references.bib"]
 
@@ -49,7 +49,7 @@ classoption       : "man"
 output            : papaja::apa6_pdf
 ---
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE, 
+knitr::opts_chunk$set(echo = FALSE, 
                       message = FALSE, 
                       warning = FALSE, 
                       fig.width = 6.5, 
