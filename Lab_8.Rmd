@@ -82,7 +82,7 @@ set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
-@wehman2014effect conducted a case study to examine the the effect of supported employment on vocational rehabilitation outcomes of transition-age youth. @ju2014employability on the other hand, examing the exmployability skills for entry-level employees with and without disabilities.
+@wehman2014effect conducted a case study to examine the the effect of supported employment on vocational rehabilitation outcomes of transition-age youth. Other researchers examined the exmployability skills for entry-level employees with and without disabilities [ju2014employability].
 
 # Methods
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
