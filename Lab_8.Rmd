@@ -1,39 +1,23 @@
 ---
-
-title             : "Lab 8"
-shorttitle        : "An Attempt at Collaboration with GitKraken"
-
-author: 
+title             : "An Attempt at Collaboration with GitKraken"
+shorttitle        : "Lab 8"
+author:
   - name          : "Akhila Nekkanti"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
-    address       : "Center for Translational Neuroscience
-                    University of Oregon
-                    1585 E 13th Ave, 
-                    Eugene, OR 97403"
+    address       : "Center for Translational Neuroscience University of Oregon 1585 E 13th Ave. Eugene, OR 97403"
     email         : "akhilan@uoregon.edu"
-   - name         : "Kyle Reardon"
+  - name         : "Kyle Reardon"
     affiliation   : "1"
     corresponding : no
-    address       : "Department of Special Education and Clinical Sciences
-                     University of Oregon"
-    email         : "kreardon@uoregon.edu"
   - name          : "Brock Rowley"
     affiliation   : "1"
     corresponding : no
-    address       : "Behavioral Research & Teaching (BRT) 
-                    175 Lokey Education 5262                                                                  University of Oregon 
-                    Eugene, OR, 97403-5262"
-    email         : "brockr@uoregon.edu"
   - name          : "Jeff Gau"
     affiliation   : "1"
     corresponding : no
-    address       : "College of Education Center on Human Development 
-                    (chd.uoregon.edu) 
-                    University Center for Excellence in Developmental Disabilities (UCEDD)                     901 East 18th Ave, CSB 354
-                    Eugene, Oregon 97403"
-    email         : "jeffg@uoregon.edu"
-    affiliation   :
+
+affiliation:
   - id            : "1"
     institution   : "University of Oregon"
     
@@ -71,18 +55,13 @@ library("papaja")
 library(janitor)
 ```
 
+
 ```{r import_data}
 star <- import(here("data", "star.csv")) %>%  
         janitor::clean_names()
 ```
 
-```{r analysis-preferences}
-# Seed for random number generation
-set.seed(42)
-knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
-```
-
-@wehman2014effect conducted a case study to examine the the effect of supported employment on vocational rehabilitation outcomes of transition-age youth. Other researchers examined the exmployability skills for entry-level employees with and without disabilities [ju2014employability].
+@wehman2014 conducted a case study to examine the the effect of supported employment on vocational rehabilitation outcomes of transition-age youth. Other researchers examined the exmployability skills for entry-level employees with and without disabilities [@ju2014].
 
 # Methods
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
