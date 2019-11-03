@@ -53,12 +53,29 @@ library(here)
 library(tidyverse)
 library("papaja")
 library(janitor)
+library(tinytex)
 ```
 
 
 ```{r import_data}
 star <- import(here("data", "star.csv")) %>%  
         janitor::clean_names()
+
+ggplot(star, aes(totexp, tmathss)) +
+  geom_point(color = "gray70") +
+  geom_smooth(method = "lm", se = TRUE, aes(color = frl)) +
+  labs(x = "Teacher Experience (years)", 
+       y = "Total Math Scale Score",
+       title = "Relation between teacher experience and math scores",
+       subtitle = "Separate regression lines displayed by free/reduced price lunch status") +
+  guides(color = guide_legend(reverse = TRUE)) +
+  theme(legend.position = "bottom") +
+  scale_fill_discrete(breaks=c("no","yes")) +
+  scale_color_manual(name="Lunch status", 
+                        labels = c("Paid Meals", "Free/Reduced Price Meals"),
+                        values = c("no"="firebrick3", 
+                                   "yes"="aquamarine3"))
+ 
 ```
 
 @wehman2014 conducted a case study to examine the the effect of supported employment on vocational rehabilitation outcomes of transition-age youth. Other researchers examined the exmployability skills for entry-level employees with and without disabilities [@ju2014].
@@ -77,12 +94,18 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 
 
 # Results
+Table 1 demonstrates the relationship between teacher experience and student's math scale scores. The two regression lines demonstrate differences between free and reduced price lunch status, which students who are not eligible for free and reduced price lunch scoring, in general, higher than those who do. In general, it does not appear that teacher experience significantly impacts this difference, as math scores for students both with and without free and reduced price lunch status appears to increase at approximately the same rate.
 
 # Discussion
 
 
 \newpage
+# Table 1
+```{r}
 
+```
+
+\newpage
 # References
 ```{r create_r-references}
 r_refs(file = "r-references.bib")
