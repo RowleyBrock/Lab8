@@ -51,9 +51,11 @@ knitr::opts_chunk$set(echo = FALSE,
 library(rio)
 library(here)
 library(tidyverse)
-library("papaja")
 library(janitor)
 library(tinytex)
+library(devtools)
+library("papaja")
+
 ```
 
 
