@@ -41,7 +41,7 @@ draft             : no
 
 documentclass     : "apa6"
 classoption       : "man"
-output            : papaja::apa6_word
+output            : papaja::apa6_pdf
 ---
 
 ```{r setup, include = FALSE}
@@ -59,7 +59,7 @@ library(tinytex)
 library(devtools)
 library(papaja)
 library("papaja")
-
+library(knitr)
 ```
 
 
@@ -102,6 +102,22 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 # Results
 Figure 1 demonstrates the relationship between teacher experience and student's math scale scores. The two regression lines demonstrate differences between free and reduced price lunch status, which students who are not eligible for free and reduced price lunch scoring, in general, higher than those who do. In general, it does not appear that teacher experience significantly impacts this difference, as math scores for students both with and without free and reduced price lunch status appears to increase at approximately the same rate.
 
+
+```{r commit4, include=FALSE, echo=FALSE}
+table_summary <- star %>% 
+  group_by(sex, frl) %>% 
+  summarize (math_mean = mean(tmathss),
+             math_sd = sd(tmathss),
+             rdg_mean = mean(treadss),
+             rdg_sd = sd(treadss))
+```
+
+Both boys and grils who recieve free or reduced lunch have lower math and reading scores relatie to boys and girls who do not recieve free or reduced lunch. Also of note, girls have higher mean math and reading scores regardless of free or reduced lunch status.
+
+```{r kable, results="asis"}
+kable(table_summary, digits = c(2,2)) 
+
+```
 # Discussion
 
 
