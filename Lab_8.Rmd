@@ -54,6 +54,7 @@ library(tidyverse)
 library(janitor)
 library(tinytex)
 library(devtools)
+library(papaja)
 library("papaja")
 
 ```
@@ -80,7 +81,7 @@ ggplot(star, aes(totexp, tmathss)) +
  
 ```
 
-@wehman2014 conducted a case study to examine the the effect of supported employment on vocational rehabilitation outcomes of transition-age youth. Other researchers examined the exmployability skills for entry-level employees with and without disabilities [@ju2014].
+@wehman2014 conducted a case study to examine the the effect of supported employment on vocational rehabilitation outcomes of transition-age youth. Other researchers examined the exmployability skills for entry-level employees with and without disabilities [@ju2013employer].
 
 # Methods
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
@@ -96,16 +97,10 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 
 
 # Results
-Table 1 demonstrates the relationship between teacher experience and student's math scale scores. The two regression lines demonstrate differences between free and reduced price lunch status, which students who are not eligible for free and reduced price lunch scoring, in general, higher than those who do. In general, it does not appear that teacher experience significantly impacts this difference, as math scores for students both with and without free and reduced price lunch status appears to increase at approximately the same rate.
+Figure 1 demonstrates the relationship between teacher experience and student's math scale scores. The two regression lines demonstrate differences between free and reduced price lunch status, which students who are not eligible for free and reduced price lunch scoring, in general, higher than those who do. In general, it does not appear that teacher experience significantly impacts this difference, as math scores for students both with and without free and reduced price lunch status appears to increase at approximately the same rate.
 
 # Discussion
 
-
-\newpage
-# Table 1
-```{r}
-
-```
 
 \newpage
 # References
