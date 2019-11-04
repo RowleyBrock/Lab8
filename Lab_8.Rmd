@@ -21,6 +21,9 @@ affiliation:
   - id            : "1"
     institution   : "University of Oregon"
     
+author note: |
+  First authosgs.hmstrljh
+    
 abstract: |
   This is our abstract and it's really something else! SO abstract! And so concise! 
   
@@ -38,7 +41,7 @@ draft             : no
 
 documentclass     : "apa6"
 classoption       : "man"
-output            : papaja::apa6_pdf
+output            : papaja::apa6_word
 ---
 
 ```{r setup, include = FALSE}
